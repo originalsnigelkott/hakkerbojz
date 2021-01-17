@@ -62,9 +62,13 @@ export default App;
   -moz-animation: glow 2s ease-in-out infinite alternate;
   animation: glow 2s ease-in-out infinite alternate;
 }
+.links {
+  display: flex;
+}
 
 .link {
-  font-family: 'Caveat', cursive;
+  margin: 0 10px;
+  font-family: "Caveat", cursive;
   text-decoration: none;
   font-size: 24px;
   color: turquoise;
@@ -91,7 +95,7 @@ export default App;
 @-webkit-keyframes glow-small {
   from {
     text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #32b8aa, 0 0 6px #32b8aa,
-      0 0 8px  #32b8aa, 0 0 9px  #32b8aa, 0 0 10px  #32b8aa;
+      0 0 8px #32b8aa, 0 0 9px #32b8aa, 0 0 10px #32b8aa;
   }
   to {
     text-shadow: 0 0 2px #fff, 0 0 3px #40e0d0, 0 0 5px #40e0d0, 0 0 7px#40e0d0,
