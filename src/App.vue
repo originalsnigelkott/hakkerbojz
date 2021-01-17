@@ -26,15 +26,19 @@ export default App;
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
 @font-face {
   font-family: "Clip";
   src: local("Clip"), url("./fonts/Clip.ttf") format("truetype");
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 .content {
   min-height: 100vh;
   width: 100%;
@@ -44,21 +48,54 @@ export default App;
   justify-content: center;
   align-items: center;
 }
+
 .header {
   padding: 20px;
 }
+
 .title {
   font-family: "Clip";
-  color: hotpink;
-  font-size: 100px;
+  color: #fff;
+  font-size: 150px;
   font-weight: normal;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
 }
+
 .link {
+  font-family: 'Caveat', cursive;
   text-decoration: none;
-  font-size: 18px;
-  color: hotpink;
+  font-size: 24px;
+  color: turquoise;
 }
+
 .link:hover {
-  text-shadow: rgb(255, 159, 207) 0 0 2px;
+  color: #fff;
+  -webkit-animation: glow-small 2s ease-in-out infinite alternate;
+  -moz-animation: glow-small 2s ease-in-out infinite alternate;
+  animation: glow-small 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073,
+      0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6,
+      0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
+
+@-webkit-keyframes glow-small {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #32b8aa, 0 0 6px #32b8aa,
+      0 0 8px  #32b8aa, 0 0 9px  #32b8aa, 0 0 10px  #32b8aa;
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 3px #40e0d0, 0 0 5px #40e0d0, 0 0 7px#40e0d0,
+      0 0 9px #40e0d0, 0 0 10px #40e0d0, 0 0 11px#40e0d0;
+  }
 }
 </style>
