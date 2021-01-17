@@ -1,0 +1,9 @@
+{
+  "port": 3000,
+  "links": [
+    {
+      "display": "Hakkerbojz",
+      "url": "https://hakkerbojz.tech"
+    }
+  ]
+}
