@@ -2,7 +2,7 @@
   <div class="links">
     <div v-for="link in links" :key="link.url" class="link-item">
       <a class="link" :href="link.url">{{ link.display }}</a>
-      <a v-if="link.doc" class="link mr-5" :href="getDocLink(link)">(docs)</a>
+      <a v-if="link.doc" class="link ml-3" :href="getDocLink(link)">(docs)</a>
     </div>
   </div>
 </template>
@@ -30,8 +30,8 @@ export default Links;
   flex-wrap: wrap;
 }
 
-.mr-5 {
-  margin-right: 5px;
+.ml-3 {
+  margin-left: 3px;
 }
 
 .link-item {
