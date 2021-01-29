@@ -2,6 +2,7 @@
   <div class="links">
     <div v-for="link in links" :key="link.url" class="link-item">
       <a class="link" :href="link.url">{{ link.display }}</a>
+      <a v-if="link.doc" class="link mr-5" :href="getDocLink(link)">(docs)</a>
     </div>
   </div>
 </template>
@@ -13,6 +14,10 @@ import { links } from "../../settings.json";
 @Component()
 class Links extends Vue {
   links = links;
+
+  getDocLink({ url, doc }) {
+    return `${url}${doc}`;
+  }
 }
 
 export default Links;
@@ -23,6 +28,10 @@ export default Links;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.mr-5 {
+  margin-right: 5px;
 }
 
 .link-item {
